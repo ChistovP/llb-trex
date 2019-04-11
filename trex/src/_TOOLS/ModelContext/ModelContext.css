@@ -1,0 +1,165 @@
+input{
+    display: none;
+}
+
+.context-attr{
+    margin: 20px 40px 10px 40px;
+    display:grid;
+    grid-template-columns: 1fr 250px;
+    grid-template-rows: auto auto auto auto;
+}
+.context-attr p{
+    display: none;
+}
+
+.context-attr label{
+    display: flex;
+    grid-column: 1/3;
+    grid-row:1;
+    align-items: center;
+    padding: 5px;  
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.context-attr label::before{
+    content: "\f107 ";
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    width: 1em;
+}
+.context-attr p{
+    margin: 0 20px 10px 20px;
+}
+
+.context-attr .attribute-descr{
+    grid-column: 1;
+    grid-row:3;
+    line-height: 1.5;
+    grid-column: 1;
+    grid-row:2;
+          white-space: pre-wrap;
+}
+.context-attr .attribute-quote{
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-left: 5px solid var(--llb-grey);
+    font-style: italic;
+    margin: 0 20px 0 20px;
+    grid-column: 1;
+    grid-row:3;
+      white-space: pre-wrap;
+    display: none;
+}
+
+.context-attr .attribute-quote .quote-title{
+    font-size: 0.7em;
+    color:grey;
+    margin: 0;
+    padding: 5px;
+}
+.context-attr .attribute-quote .quote-title::before{
+    content: "\f10d ";
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    width: 1em;
+}
+
+.context-attr-also{
+    grid-column: 2;
+    background-color: #ebf4ff;
+    border-left: 5px solid #297dba;  
+    display: none;
+    grid-row: 2/5;
+}
+.context-attr-also .attribute-personas a, .context-attr .attribute-sensors a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--llb-blue);
+    font-size: 1em;
+}
+.context-attr-also .attribute-personas a:hover, .context-attr-also .attribute-sensors a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    
+}
+.context-attr-also p{
+    
+}
+.context-attr-also see-also i{
+        color: lightgrey;
+}
+
+.context-attr-also .see-also{
+    padding: 20px 0 0 0;
+    color: #7588a0;
+}
+.context-attr-also .see-also-persona::after, .context-attr-also .see-also-sensor::after{
+    content: " \f059";
+    font-family: 'Font Awesome\ 5 Free';
+}
+.context-attr-also .see-also-persona{
+    padding: 10px 0 0 0;
+    color: #7588a0;
+    font-size: 0.8em;
+    width: max-content;
+}
+.context-attr-also .see-also-sensor {
+    padding: 10px 0 0 0;
+    color: #7588a0;
+    font-size: 0.8em;
+    width: max-content;
+}
+.context-attr-also .see-also-persona:hover{
+    cursor: pointer;
+    margin-bottom: 0;
+}
+.context-attr-also .see-also-sensor:hover{
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.context-attr-also .see-also-tooltip{
+    width: 200px;
+    font-size: 0.8em;
+    background-color: white;
+    border: 1px solid lightgrey;
+    padding:10px;
+    display: none;
+    position: absolute;
+    margin: 0 0 0 20px;
+}
+.context-attr-also .see-also-tooltip i{
+    grid-column: 1;
+    padding: 3px 10px 10px 0;
+    font-size: 1.5em;
+    color: lightgrey;
+    margin: 0;
+}
+.context-attr-also .see-also:hover{
+    cursor: pointer;
+}
+.context-attr-also .see-also-persona:hover ~ #persona-tooltip {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.context-attr-also .see-also-sensor:hover ~ #sensor-tooltip {
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.expand-all, .collapse-all{
+    float:right;
+}
+
+
+
+[id^=collapse]:checked ~ p, [id^=collapse]:checked ~ .context-attr-also, [id^=collapse]:checked ~ .context-attr-also p,  [id^=collapse]:checked ~ .attribute-quote,  [id^=collapse]:checked ~ .attribute-quote p{
+    display: block;
+}
+
+[id^=collapse]:checked + label::before{
+    content: '\f106 ';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    width: 1em;  
+}

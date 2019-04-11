@@ -1,0 +1,175 @@
+.home{
+    display: grid;
+    grid-template-columns: 400px 400px;
+    grid-auto-rows: max-content;
+    justify-content: center;
+    text-align: center;
+}
+.home .intro-start{
+     letter-spacing: 1px;
+    grid-column: 1/3;
+        margin: 40px 0 10px 0;
+}
+.home .intro-start a{
+    background-color: var(--llb-green);
+    width: max-content;
+    padding: 15px 70px 15px 70px;
+    color: white;
+
+    text-decoration: none;
+    transition: 100ms;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.home .intro-start a:hover{
+    cursor: pointer;
+    background-color: var(--llb-lightblue);
+    border-left: 10px solid var(--llb-blue);
+    border-right: 10px solid var(--llb-blue);
+    transition: 100ms;
+    border-radius: 0;    
+}
+
+.home .intro-title{
+    grid-column: 1/3;
+    font-size: 1.5em; 
+    text-align: center;
+    margin: 0;
+    font-weight: 300;
+    padding: 0;
+}
+.home .intro-subtitle{
+    grid-column: 1/3;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.home .intro-block{
+    font-weight: 300;
+    padding: 40px;
+    margin:0;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+.home .intro-logo{
+    width: 200px;
+    height: auto;
+    background-color: white;
+    grid-column: 1/3;
+    text-align: center;
+    display: block;
+    margin: 70px auto 20px auto;
+}
+
+
+
+
+.intro-toolkit{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-template-rows: auto 75px max-content max-content  max-content;
+    justify-content: center;
+    grid-column-gap: 50px;
+    padding-top: 50px;
+    border-top: 1px solid lightgrey;
+}
+
+.intro-toolkit .intro-subtitle{
+    grid-column: 1/5;
+    grid-row: 1;
+    margin: 0 0 40px 0;
+}
+.intro-toolkit .intro-toolkit-icon{
+    width: 75px;
+    height: 75px;
+    grid-row: 2;
+    background-color: white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 200ms;
+}
+.intro-toolkit .intro-toolkit-title{
+    grid-row: 3;
+    text-align: center;
+}
+.intro-toolkit .intro-toolkit-descr{
+    grid-row: 4;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+
+
+.intro-other{
+    grid-column: 1/3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 75px max-content max-content;
+    justify-content: center;
+    grid-column-gap: 50px;
+    padding-top: 50px;
+        border-top: 1px solid lightgrey;
+}
+
+.intro-other .intro-subtitle{
+    grid-column: 1/3;
+    grid-row: 1;
+    margin: 0 0 40px 0;
+}
+.intro-other .intro-sensor-icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    grid-column: 1;
+    grid-row: 2;
+}
+.intro-other .intro-sensor-title{
+    text-align: center;
+    grid-column: 1;
+    grid-row: 3;
+}
+.intro-other .intro-sensor-descr{
+    text-align: center;
+    font-weight: 300;  
+    grid-row: 4;
+    grid-column: 1;
+        margin-bottom: 50px;
+}
+.intro-other .intro-resources-icon{
+    grid-column: 2;
+    grid-row: 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    grid-column: 2;
+    grid-row: 2;
+    transition: 200ms;
+}
+.intro-other .intro-resources-title{
+    grid-row: 3;
+    grid-column: 2;
+    text-align: center;  
+}
+.intro-other .intro-resources-descr{
+    text-align: center;
+    font-weight: 300;
+    grid-row: 4;
+    grid-column: 2;
+    margin-bottom: 50px;
+}
+
+.intro-toolkit-icon:hover img{
+    opacity: 0.5;
+    transition: 200ms;
+}

@@ -1,0 +1,102 @@
+.persona-list{
+    margin: 20px 40px 10px 40px;
+    grid-template-columns: auto auto auto auto auto;
+    grid-auto-rows: auto;
+    display: grid;
+    grid-column-gap: 20px;
+    
+}
+
+.persona-item{
+    display: grid;
+    grid-template-rows: 200px 20px 20px 100px 50px;
+    grid-template-columns: 200px;
+    transition: 100ms;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    justify-content: center;
+        transition: 200ms;
+}
+
+.persona-item img{
+    height: auto;
+    width: 200px;
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0;
+        background-color: var(--llb-blue);
+        transition: 200ms;
+}
+
+.persona-item .persona-name{
+    grid-column: 1;
+    grid-row: 2;
+    margin: 0;
+    text-decoration: none;
+    font-weight: 300;
+    color:var(--llb-grey);
+    font-size: 1.3em;
+    text-align: center;
+    padding: 0;
+        transition: 200ms;
+}
+.persona-item a{
+    margin: 0;
+    font-size: 0.9em;
+    text-decoration: none;
+    font-weight: bold;
+    color:var(--llb-blue);
+    font-size: 1.1em;
+    text-align: center;
+    transition: 100ms;
+
+}
+
+.persona-item .persona-type{
+    grid-column: 1;
+    grid-row: 3;
+    margin: 0;
+    padding: 0;
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: bold;
+    padding: 3px;
+
+
+}
+.persona-item .persona-highlight{
+    grid-column: 1;
+    margin: 0;
+    padding: 0 5px 0 5px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+
+.persona-item a::before{ 
+    cursor:pointer;
+    text-decoration: underline;
+
+}
+.persona-item:hover{ 
+    cursor:pointer;
+/*
+    background-color: var(--llb-lightblue);
+    color:white;
+*/
+
+}
+.persona-item:hover a{ 
+/*    color:white;*/
+}
+.persona-item:hover .persona-name{ 
+/*    color:white;*/
+}
+.persona-item:hover img{ 
+    opacity: 0.5;
+    transition: 200ms;
+}
+.persona-item a:hover{ 
+    cursor:pointer;
+    text-decoration: underline;
+}

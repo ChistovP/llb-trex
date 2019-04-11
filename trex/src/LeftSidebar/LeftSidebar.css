@@ -1,0 +1,136 @@
+.sidebar-left{
+    grid-column:1;
+    padding: 30px 10px 0 100px;
+    margin: 0;
+    position: sticky;
+    top: 50px;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: -0.5px;
+    opacity: 0.5;
+    transition: 200ms;
+} 
+.sidebar-left:hover{
+    opacity: 1;
+    transition: 200ms;
+}    
+.sidebar-left ul{
+    list-style: none;
+}
+
+.sidebar-left .first-level{
+    padding: 0;
+    margin: 0 0 0 10px;
+    font-size: 1em;
+}
+.sidebar-left .second-level{
+    padding: 0;
+    margin: 0 0 0 20px;
+    display: none;
+    font-size: 0.9em;
+}
+.sidebar-left .third-level{
+    padding: 0;
+    margin: 0 0 0 15px;
+    display: none;
+    font-size: 1em;
+}
+
+.sidebar-left .first-level li a{
+    text-decoration: none;
+    display: block;
+    padding: 7px 0 7px 7px;  
+    color: black;
+
+}
+.sidebar-left .second-level li a{
+    padding: 7px 0 7px 7px;   
+   color: #4a4a4a;
+}
+.sidebar-left .second-level label{
+   color: #4a4a4a;
+}
+.sidebar-left .third-level li a{
+    padding: 7px 0 7px 7px;   
+   color: #696969;
+}
+
+.sidebar-left li a:hover{
+    transition: 150ms;
+    background-color: #bee6ff;
+}
+
+
+.sidebar-left .selected{
+    border-right: 5px solid var(--llb-blue);
+       background-color: #bee6ff;
+}
+
+.about::before{
+
+}
+
+.about::before{
+
+
+}
+
+.sidebar-left label{
+    text-decoration: none;
+    display: block;
+    padding: 7px 0 7px 7px;  
+    font-size: 1em;   
+    margin-left: -1em;
+}
+.sidebar-left label::before{
+    content: "\f107 ";
+    display: inline-block;
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    width: 1em;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+
+#pers, #modl, #tlbx{
+    display: none;
+}
+#pers:checked ~ .third-level{
+    display: block;
+
+}
+#pers:checked  + label:before{
+    content: '\f106 ';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900; /* Fix version 5.0.9 */
+}
+#modl:checked ~ .third-level {
+    display: block;
+}
+#modl:checked + label:before{
+    content: '\f106 ';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    width: 1em;
+}
+#tlbx:checked ~ .second-level {
+    display: block;
+}
+#tlbx:checked + label:before{
+    content: '\f106 ';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    width: 1em;    
+}
+
+
+@media (max-width: 990px) {
+    .sidebar-left{
+        display: none;
+    }
+}
+

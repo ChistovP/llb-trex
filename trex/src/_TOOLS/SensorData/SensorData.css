@@ -1,0 +1,237 @@
+/*https://www.npmjs.com/package/react-rt-chart*/
+
+.sensor-data{
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    margin: 10px 40px 10px 40px;
+    grid-column-gap: 20px;
+}
+
+.select-id{
+    margin: 0 40px 0 40px;
+}
+.select-id p{
+    margin: 0;
+    padding: 5px 10px 5px 0;
+}
+.select-id button{
+    border:0;
+    background-color: white;
+    margin: 0;
+    padding: 5px 10px 5px 10px;
+    color:var(--llb-blue);
+    font-weight: bold;
+    font-size: 1em;
+}
+.select-id button:hover{
+    background-color: var(--llb-blue);
+    cursor: pointer;
+    color: white;
+}
+
+.data{
+    display: grid;
+    grid-template-columns: 1fr;
+
+}
+.map{
+    display: grid;
+    grid-template-columns: 400px;
+    grid-template-rows: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.data-second-column{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.sensor-block{
+    margin: 0 0 0 0;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-auto-rows: auto;
+    grid-row-gap: 10px;
+}
+
+.sensor-block p{
+    display: none;
+    margin: 0 0 0 25px;
+}
+
+.sensor-block label{
+    display: flex;
+    align-items: center;
+    padding: 7px;  
+    font-weight: bold;
+    font-size: 1em;
+    margin: 0 0 5px 0;
+    grid-column: 1/5;
+}
+.data label::before{
+    content: "\f107 ";
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    width: 1em;
+}
+
+
+
+#status, #status2{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+#status label,#status2 label{
+    grid-row: 1;
+    grid-column: 1 / 5;
+}
+
+.status-block{
+    display: none;
+}
+.status-block #status-title{
+    display: none;
+}
+.status-block #status-data{
+    display: none;
+}
+
+
+.chart-block{
+    display: none;
+}
+.chart-block #chart-title{
+    font-size: 0.8em;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    color:#5f5f5f;
+
+}
+.chart-block #chart-data{
+    font-size: 1em;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+}
+
+#chart-block-first{
+        grid-row: 1;
+}
+#chart-block-second{
+    grid-row:2;
+}
+#status .chart-block{
+    display: none;
+    grid-template-rows: max-content max-content;
+    grid-template-columns: max-content;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 0 0;
+    grid-column: 1 / 5;  
+}
+#status2 .chart-block{
+    display: none;
+    grid-template-rows: max-content max-content;
+    grid-template-columns: max-content;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 0 0;
+    grid-column: 1 / 5;  
+}
+
+
+
+
+[id^=sensorblock]:checked ~ p{
+    display: block;
+}
+
+
+[id^=sensorblock]:checked ~ .status-block{
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 0 0;
+}
+[id^=sensorblock]:checked ~ .status-block #status-title{
+    display: block;
+    font-size: 0.8em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color:#5f5f5f;
+
+}
+[id^=sensorblock]:checked ~ .status-block #status-data{
+    display: block;
+    font-size: 1em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+[id^=sensorblock]:checked ~ .chart-block{
+    display: grid;
+    grid-template-rows: max-content max-content;
+    grid-template-columns: max-content;
+    justify-content: center;
+    padding: 0;
+    margin: 0 0 0 0;
+    grid-column-end: 1 / 2;
+    grid-column: 1;
+}
+
+[id^=sensorblock]:checked ~ .chart-block p{
+    display: block;
+}
+
+#status [id^=sensorblock]:checked ~  .chart-block{
+    display: grid;
+}
+#status2 [id^=sensorblock]:checked ~  .chart-block{
+    display: grid;
+}
+    
+
+[id^=sensorblock]:checked + label::before{
+    content: '\f106 ';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    width: 1em;  
+}
+
+#lastblock{
+    margin-bottom: 50px;
+}
+
+
+
+
+/*                    <div className="status-block"> 
+                        <p id="status-data">{this.state.busRotation}</p>
+                        <p id="status-title">Rotation</p> 
+                    </div>   
+                    <div className="status-block"> 
+                        <p id="status-data">{this.state.busGyro} mdps</p>
+                        <p id="status-title">Gyroscope</p> 
+                    </div>   
+                    <div className="status-block"> 
+                        <p id="status-data">{this.state.busMagn} mgauss</p>
+                        <p id="status-title">Magnetometer</p> 
+                    </div>    
+                    <div className="status-block"> 
+                        <p id="status-data">{this.state.busIncl}</p>
+                        <p id="status-title">Inclination</p> 
+                    </div>    
+                    <div className="status-block"> 
+                        <p id="status-data">{this.state.busAccel}mg</p>
+                        <p id="status-title">Acceleration</p> 
+                    </div> */
+
+

@@ -1,0 +1,10 @@
+.sidebar-right{
+    grid-column:3;
+
+}
+
+@media (max-width: 990px) {
+    .sidebar-right{
+        display: none;
+    }
+}

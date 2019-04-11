@@ -1,0 +1,50 @@
+.toolkit-list{
+    padding: 0;
+    margin: 20px 40px 20px 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+}
+
+.toolkit-item{
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    grid-template-rows: auto 40px;
+    grid-column-gap: 10px;
+    grid-row-gap: 5px;
+    align-items: center;
+}
+.toolkit-item:hover img{
+    opacity: 0.5;
+    transition: 200ms;
+}
+
+.toolkit-item img{
+    grid-column: 1;
+    grid-row: 1/3;
+    color: var(--llb-blue);
+
+    margin: 0;
+}
+.item-title{
+    grid-column: 2;
+    grid-row: 1;
+    padding: 0 5px 5px 5px;
+    text-decoration: none;
+    width: max-content;
+    font-weight: bold;
+    color: var(--llb-blue);
+    font-size: 1.1em;
+    margin: 0;
+}
+.item-title:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.item-descr{
+    grid-column: 2;
+    grid-row: 2;
+    padding: 5px;
+    line-height: 1.5;
+    margin: 0;
+}

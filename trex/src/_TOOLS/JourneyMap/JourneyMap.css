@@ -1,0 +1,20 @@
+.journey-map{
+    padding: 0;
+    margin: 20px 40px 20px 40px;
+    display:grid;
+    grid-template-columns: 1fr;
+}
+.journey-map a img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
