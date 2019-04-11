@@ -2,7 +2,7 @@
   "name": "trex",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://chistovp.github.io/llb-trex/"
+  "homepage": "https://chistovp.github.io/llb-trex/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.6.3",
@@ -27,6 +27,6 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
+  ]
 
 }
