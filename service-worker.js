@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/llb-trex/precache-manifest.b5d8c298845b4069c4773761893da3c9.js"
+  "/llb-trex/precache-manifest.12d2b5ac4f53ab411341e12f47717876.js"
 );
 
 workbox.clientsClaim();
